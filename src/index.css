@@ -1,13 +1,111 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+    background-image: linear-gradient(to top right, #A7B3C8, #F7C5B5);
+    min-height: 100vh;
+    color: #001524;
+}
+
+.app-wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 100px 10px;
+}
+
+.site-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.folder-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.folder {
+    background: linear-gradient(to top right, #98C1D9, #E0FBFC);
+    margin: 10px;
+    width: 400px;
+    padding: 10px 30px;
+    transition: box-shadow .5s;
+    cursor: pointer;
+    position: relative;
+    min-height: 100px;
+    max-width: 75vw;
+    display: flex;
+    align-self: self-start;
+}
+
+.folder-hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.folder-content {
+    max-width: 75%;
+}
+
+.folder-info {
+    width: 25%;
+}
+
+
+.folder-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 5px 0;
+    z-index: 10;
+    white-space: pre-line;
+    position: relative;
+}
+
+.folder-items-count {
+    color: #4C94BD;
+    font-size: 6rem;
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.folder-items-count-hover {
+    opacity: 1;
+    right: 20px;
+}
+
+.folder-arrow {
+    margin: 0;
+    position: absolute;
+    font-size: 30px;
+    opacity: 0;
+    bottom: 10px;
+    right: 0;
+    transition: .3s;
+}
+
+.folder-arrow-hover {
+    opacity: 1;
+    right: 15px;
+}
+
