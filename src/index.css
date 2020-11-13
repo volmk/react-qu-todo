@@ -54,6 +54,7 @@ code {
     max-width: 75vw;
     display: flex;
     align-self: self-start;
+    border-radius: 3px;
 }
 
 .folder-hover {
@@ -108,4 +109,80 @@ code {
     opacity: 1;
     right: 15px;
 }
+
+.tasks-folder-descr {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.tasks-content{
+    max-width: 700px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.link {
+    text-decoration: none;
+    color: #001524;
+}
+
+.task-list{
+    margin: 20px auto;
+    border: 1px solid #001524;
+    background: linear-gradient(to top right, #98C1D9, #E0FBFC);
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.task{
+    border: 1px solid #001524;
+    margin: 10px 0;
+    border-radius: 7px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s;
+    cursor: pointer;
+}
+
+
+.task-hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+.task-info{
+    display: flex;
+    align-items: center;
+}
+
+.task-info span{
+    margin-left: 10px;
+}
+
+.task-check{
+    width: 20px;
+    height: 20px;
+}
+
+.task-trash-icon{
+    padding: 5px;
+}
+
+.task-trash-icon-hover{
+    color: #e63946;
+}
+.task-settings{
+    opacity:0;
+    transition: .5s;
+}
+
+.task-settings-hover{
+    opacity:1;
+    margin-right: 10px;
+}
+
+
 

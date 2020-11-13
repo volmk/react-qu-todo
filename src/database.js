@@ -6,7 +6,15 @@ class FolderData {
     }
 
     get itemsCount() {
-        return _tasks.filter(task => task.folderId === this.id).length
+        return this.tasks.length
+    }
+
+    get tasks() {
+        return _tasks.filter(task => task.folderId === this.id)
+    }
+
+    static getFolder(folderId) {
+        return _folders.filter(folder => folder.id === folderId)[0]
     }
 
     static add(folder) {
@@ -18,11 +26,7 @@ class FolderData {
     }
 
     static remove(folder) {
-        _folders.filter(id => id !== folder.id)
-    }
-
-    static getTasks(folderId) {
-        return _tasks.filter(task => folderId === task.folderId)
+        _folders = _folders.filter(id => id !== folder.id)
     }
 }
 
@@ -32,6 +36,10 @@ class TaskData {
         this.done = false
         this.text = text
         this.folderId = folderId
+    }
+
+    remove() {
+        _tasks = _tasks.filter(id => id !== this.id)
     }
 }
 

@@ -35,7 +35,7 @@ const Folder = ({id, title, itemsCount, descr}) => {
             </div>
             <div className="folder-info">
                 <p className={itemsCountClasses.join(' ')}>{itemsCount}</p>
-                <span className={folderArrowClasses.join(' ')}></span>
+                <span className={folderArrowClasses.join(' ')}/>
             </div>
         </div>
     );
